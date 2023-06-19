@@ -1,16 +1,17 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Code for 0-9
+ * Code for hexadecimals
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int n = 122;
 
-	for (n = 0; n <= 9; n++)
+	while (n >= 97)
 	{
-		putchar(n + 48);
+		putchar(n);
+		n--;
 	}
 	putchar('\n');
 	return (0);
