@@ -71,9 +71,8 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO,
 					"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
-			exit(99);
+			exit(98);
 		}
-
 		w = write(to, buffer, r);
 
 		if (to == -1 || w == -1)
@@ -86,6 +85,7 @@ int main(int argc, char *argv[])
 
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
+
 	} while (r > 0);
 
 	free(buffer);
